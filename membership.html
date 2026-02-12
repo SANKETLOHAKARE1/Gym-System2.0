@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans - FitZone Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .membership-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .membership-table th {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .membership-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .membership-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .membership-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .addon-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .addon-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .addon-price {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-dumbbell"></i> FitZone</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="classes.html" class="nav-link">Classes</a></li>
+                <li><a href="membership.html" class="nav-link active">Membership</a></li>
+                <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 3rem 2rem; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-dark);">Membership Plans</h1>
+            <p style="font-size: 1.2rem; color: #666;">Choose the perfect plan for your fitness goals</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 2rem;">
+        <!-- Membership Comparison Table -->
+        <section style="margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 1rem; text-align: center;">Compare Our Plans</h2>
+            <table class="membership-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Basic</th>
+                        <th>Premium</th>
+                        <th>Elite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Monthly Price</strong></td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$29.99</td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$59.99</td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$99.99</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Annual Price</strong></td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$299.99</td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$599.99</td>
+                        <td style="color: var(--primary-color); font-weight: 600;">$999.99</td>
+                    </tr>
+                    <tr>
+                        <td>Gym Access Hours</td>
+                        <td>6 AM - 10 PM</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> 24/7</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> 24/7</td>
+                    </tr>
+                    <tr>
+                        <td>Cardio & Weight Equipment</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Group Fitness Classes</td>
+                        <td>Limited</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> Unlimited</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Swimming Pool Access</td>
+                        <td></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Personal Training Sessions</td>
+                        <td>Not Included</td>
+                        <td>Not Included</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> 2/Month</td>
+                    </tr>
+                    <tr>
+                        <td>Nutrition Counseling</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Spa & Massage Services</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> Included</td>
+                    </tr>
+                    <tr>
+                        <td>Sauna & Steam Room</td>
+                        <td></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Guest Privileges</td>
+                        <td></td>
+                        <td>1 Guest/Month</td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i> Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Priority Class Booking</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="fas fa-check" style="color: var(--success-color);"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add-on Services -->
+        <section style="margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 2rem; text-align: center;">Add-On Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-user-tie"></i> Personal Training Session</h4>
+                        <p style="color: #666; font-size: 0.9rem;">One-on-one expert coaching (60 minutes)</p>
+                    </div>
+                    <div class="addon-price">$75</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-dumbbell"></i> 4-Pack Training Sessions</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Four sessions with 10% discount</p>
+                    </div>
+                    <div class="addon-price">$260</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-infinity"></i> Monthly Unlimited Training</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Unlimited personal training sessions</p>
+                    </div>
+                    <div class="addon-price">$399</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-apple-alt"></i> Nutrition Consultation</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Personalized meal & nutrition plan</p>
+                    </div>
+                    <div class="addon-price">$50</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-spa"></i> Massage Therapy Session</h4>
+                        <p style="color: #666; font-size: 0.9rem;">60-minute professional massage</p>
+                    </div>
+                    <div class="addon-price">$80</div>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4><i class="fas fa-user-friends"></i> Group Training Session</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Small group training (up to 5 people)</p>
+                    </div>
+                    <div class="addon-price">$45</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%); color: white; padding: 2rem; border-radius: 8px; margin-bottom: 4rem; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+                <i class="fas fa-star"></i> Limited Time Offer
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Join today and get 50% off your first month!</p>
+            <p style="font-size: 0.95rem;">Valid for new members until end of February. Annual plans get an additional 3 months free!</p>
+        </section>
+
+        <!-- Membership Form -->
+        <section style="background-color: #f8f9fa; padding: 3rem; border-radius: 8px; margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 2rem; text-align: center;">Sign Up for Membership</h2>
+            <form style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="member-name">Full Name:</label>
+                    <input type="text" id="member-name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-email">Email Address:</label>
+                    <input type="email" id="member-email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-phone">Phone Number:</label>
+                    <input type="tel" id="member-phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="member-dob">Date of Birth:</label>
+                    <input type="date" id="member-dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-plan">Select Membership Plan:</label>
+                    <select id="member-plan" name="plan" required>
+                        <option value="">-- Choose a Plan --</option>
+                        <option value="basic">Basic ($29.99/month)</option>
+                        <option value="premium">Premium ($59.99/month)</option>
+                        <option value="elite">Elite ($99.99/month)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-duration">Billing Cycle:</label>
+                    <select id="member-duration" name="duration" required>
+                        <option value="">-- Select Duration --</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual (Save 15%)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-goals">Fitness Goals:</label>
+                    <textarea id="member-goals" name="goals" placeholder="Tell us about your fitness goals..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="member-experience">Fitness Experience Level:</label>
+                    <select id="member-experience" name="experience" required>
+                        <option value="">-- Select Level --</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="professional">Professional Athlete</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes"> 
+                        <span style="font-weight: normal;">Subscribe to our newsletter for fitness tips and special offers</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" value="yes" required> 
+                        <span style="font-weight: normal;">I agree to the Terms and Conditions and Privacy Policy</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Complete Registration</button>
+                <button type="reset" style="width: 100%; padding: 1rem; background: #666; color: white; border: none; border-radius: var(--border-radius); font-weight: 600; cursor: pointer; margin-top: 1rem;">Clear Form</button>
+            </form>
+        </section>
+
+        <!-- FAQ -->
+        <section style="margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 2rem; text-align: center;">Frequently Asked Questions</h2>
+            <div style="display: grid; gap: 1rem;">
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">Can I cancel my membership anytime?</summary>
+                    <p style="margin-top: 1rem; color: #666;">Yes, you can cancel your membership anytime. If you're on a monthly plan, you can cancel with 30 days notice. Annual plans have a 60-day cancellation notice.</p>
+                </details>
+
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">Do you offer a free trial?</summary>
+                    <p style="margin-top: 1rem; color: #666;">Yes! We offer a complimentary trial pass for 1 day to explore our facilities and meet our staff. Contact us to schedule your trial.</p>
+                </details>
+
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">What payment methods do you accept?</summary>
+                    <p style="margin-top: 1rem; color: #666;">We accept all major credit/debit cards, bank transfers, and PayPal. Payments are processed securely on the 1st of each month.</p>
+                </details>
+
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">Can I freeze my membership?</summary>
+                    <p style="margin-top: 1rem; color: #666;">Yes, we offer membership freeze options for up to 3 months due to travel, injury, or other circumstances. Contact our membership team for details.</p>
+                </details>
+
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">Do you have family or group discounts?</summary>
+                    <p style="margin-top: 1rem; color: #666;">Yes! Family memberships (3+ members) get 20% discount. Corporate groups get special rates. Contact sales@fitzone.com for more information.</p>
+                </details>
+
+                <details style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--text-dark);">What's included in the Elite membership?</summary>
+                    <p style="margin-top: 1rem; color: #666;">Elite membership includes 24/7 gym access, unlimited classes, 2 personal training sessions per month, nutrition counseling, spa access, and unlimited guest privileges.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-dumbbell"></i> FitZone</h3>
+                    <p>Your premier destination for fitness and wellness. Transform your body, transform your life.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 123 Fitness Street, Gym City, ST 12345</p>
+                    <p>📧 info@fitzone.com</p>
+                    <p>📱 +1 (555) 0123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitZone Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers - FitZone Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .trainer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .trainer-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .trainer-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .trainer-info {
+            padding: 1.5rem;
+        }
+
+        .trainer-name {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .trainer-specialization {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .trainer-bio {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .trainer-certs {
+            background: #f0e6ff;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .trainer-certs h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .cert-list {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .cert-list li {
+            padding: 0.25rem 0;
+        }
+
+        .cert-list i {
+            color: var(--success-color);
+            margin-right: 0.5rem;
+        }
+
+        .trainer-availability {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .availability-tag {
+            flex: 1;
+            background: #e8f5e9;
+            color: var(--success-color);
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .book-trainer-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .book-trainer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-dumbbell"></i> FitZone</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="classes.html" class="nav-link">Classes</a></li>
+                <li><a href="membership.html" class="nav-link">Membership</a></li>
+                <li><a href="trainers.html" class="nav-link active">Trainers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); padding: 3rem 2rem; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-dark);">Our Expert Trainers</h1>
+            <p style="font-size: 1.2rem; color: #666;">Meet our certified fitness professionals dedicated to your success</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 2rem;">
+        <!-- Trainer Grid -->
+        <div class="trainer-grid">
+            <!-- Trainer 1: Sarah Johnson -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-female"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Sarah Johnson</h3>
+                    <p class="trainer-specialization">Yoga & Flexibility Specialist</p>
+                    <p class="trainer-bio">Sarah brings 8 years of yoga teaching experience with a focus on mindfulness and body awareness. She specializes in therapeutic yoga and wellness programs.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> RYT-500 Yoga</li>
+                            <li><i class="fas fa-check-circle"></i> Pilates Instructor</li>
+                            <li><i class="fas fa-check-circle"></i> Flexibility Coach</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Mon, Wed, Fri</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 2: Mike Chen -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-male"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Mike Chen</h3>
+                    <p class="trainer-specialization">Cycling & Cardio Coach</p>
+                    <p class="trainer-bio">Mike is a passionate cycling coach with 10 years of competitive experience. He creates high-energy classes that motivate members to push their limits.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Certified Cycling Coach</li>
+                            <li><i class="fas fa-check-circle"></i> ISSA Fitness Professional</li>
+                            <li><i class="fas fa-check-circle"></i> Cardio Specialist</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Tue, Thu, Sat</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 3: Alex Thompson -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-male"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Alex Thompson</h3>
+                    <p class="trainer-specialization">CrossFit & Strength Training</p>
+                    <p class="trainer-bio">Alex is a Level 2 CrossFit coach with 12 years of training experience. He specializes in functional fitness and personalized strength programs.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Level 2 CrossFit Coach</li>
+                            <li><i class="fas fa-check-circle"></i> Strength & Conditioning</li>
+                            <li><i class="fas fa-check-circle"></i> Olympic Lifting</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Mon, Wed, Fri</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 4: Maria Garcia -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-female"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Maria Garcia</h3>
+                    <p class="trainer-specialization">Dance Fitness & Zumba</p>
+                    <p class="trainer-bio">Maria brings energy and passion to every class! With 7 years of dance and fitness instruction, she makes working out fun and engaging.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Certified Zumba Instructor</li>
+                            <li><i class="fas fa-check-circle"></i> Dance Fitness Expert</li>
+                            <li><i class="fas fa-check-circle"></i> Group Fitness Instructor</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Tue, Thu, Sat</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 5: David Wilson -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-male"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">David Wilson</h3>
+                    <p class="trainer-specialization">Boxing & Combat Training</p>
+                    <p class="trainer-bio">David is a certified boxing coach with professional fighting experience. He teaches proper technique while building confidence and strength.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Professional Boxing Coach</li>
+                            <li><i class="fas fa-check-circle"></i> Combat Sports Trainer</li>
+                            <li><i class="fas fa-check-circle"></i> Self-Defense Instructor</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Mon, Wed, Fri</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 6: Emma Davis -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-female"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Emma Davis</h3>
+                    <p class="trainer-specialization">Pilates & Core Conditioning</p>
+                    <p class="trainer-bio">Emma specializes in core strength and body conditioning. With 9 years of experience, she transforms posture and builds lean muscle.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Certified Pilates Instructor</li>
+                            <li><i class="fas fa-check-circle"></i> Core Training Specialist</li>
+                            <li><i class="fas fa-check-circle"></i> Pre/Post Natal Fitness</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Tue, Thu, Sun</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 7: James Miller -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-male"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">James Miller</h3>
+                    <p class="trainer-specialization">HIIT & Conditioning Expert</p>
+                    <p class="trainer-bio">James specializes in high-intensity interval training for maximum results in minimum time. Perfect for busy fitness enthusiasts.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> HIIT Specialist</li>
+                            <li><i class="fas fa-check-circle"></i> Athletic Performance Coach</li>
+                            <li><i class="fas fa-check-circle"></i> Nutrition & Fitness</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Mon, Wed, Fri</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+
+            <!-- Trainer 8: Robert Brown -->
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <i class="fas fa-male"></i>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">Robert Brown</h3>
+                    <p class="trainer-specialization">Strength & Muscle Building</p>
+                    <p class="trainer-bio">Robert is a certified strength coach with 15 years of experience in building muscle and increasing performance.</p>
+                    <div class="trainer-certs">
+                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> ISSN Certified</li>
+                            <li><i class="fas fa-check-circle"></i> Strength Coach</li>
+                            <li><i class="fas fa-check-circle"></i> Competition Preparation</li>
+                        </ul>
+                    </div>
+                    <div class="trainer-availability">
+                        <div class="availability-tag">Tue, Thu, Sat</div>
+                    </div>
+                    <button class="book-trainer-btn" onclick="alert('Booking request sent!')">Book Session</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 3rem; border-radius: 8px; text-align: center; margin-top: 4rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to Work with Our Trainers?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Book your first session today and start your transformation</p>
+            <a href="membership.html" class="btn btn-light">Get Started</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-dumbbell"></i> FitZone</h3>
+                    
